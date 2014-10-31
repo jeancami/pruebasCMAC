@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+    	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" http-equiv="content-type" charset="utf-8"/>
+    	<title>Ubicación de referencia Google Maps de equipos y dispositivos de Canalaes de Atención</title>
+        <script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAlQgL_i6ZEk1ulTIFCxlNIJzAfNUUi4k&V=3.9&sensor=false">
+		</script>
+        <script type="text/javascript">
+			var map;
+			function initialize(){
+				var arequipa = new google.maps.LatLng(-16.413356, -71.538067);
+				var mapOptions = {
+					center: arequipa,
+					zoom: 11,
+					mapTypeId: google.maps.MapTypeId.HYBRID
+					//mapTypeId: google.maps.MapTypeId.ROADMAP
+					//SATELLITE, HYBRID, TERRAIN
+				};
+				map = new google.maps.Map(document.getElementById("map_canvas"),mapOptions);
+				
+				//var positions = [[ADDRESS]];
+				
+				/*for (i=0;i<positions.length;i++){
+					var pos = positions[i];
+					createMarker(new google.maps.LatLng(pos[0],pos[1]));
+				}
+				function createMarker(posit){
+				map.setCenter(posit);
+				var marker = new google.maps.Marker({
+					map: map,
+					position: posit,
+					title: 'Aqui iran datos de ayuda de las ubicacioens jaladas de la base de datos',
+					icon: 'https://google-maps-icons.googlecode.com/files/atm.png'
+				});
+				//POS http://www.kasadlalekarzy.pl/wp-content/uploads/2014/08/posnet_mobileeu_50.png
+				//POS http://www.digica.sh/bundles/digicashcore/img/hp-payment-pos__card-terminal.png?201410030949-47
+				//http://www.nellorebusiness.com/wp-content/uploads/2014/05/atms-nellore-50x50.png
+				//https://cdn4.iconfinder.com/data/icons/STROKE/accounting/png/128/atm.png				//http://2.bp.blogspot.com/-_vD-JhXai1I/Uy5Ac9AYlRI/AAAAAAAAD2U/ico__cN07x8/s1600/atm_icon_800x600_1x.resized.png	//https://google-maps-icons.googlecode.com/files/atm.png
+			}*/
+			}
+		</script>
+    </head>
+    
+    <body onLoad="initialize()">
+    	<div id="map_canvas" style=" width: 700px; height: 700px"></div>
+	</body>
+</html>
